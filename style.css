@@ -1,0 +1,63 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    background-color: #f7f7f7;
+}
+header {
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+header h1 {
+    font-size: 2em;
+}
+header nav {
+    margin-top: 15px;
+}
+header nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+main {
+    padding: 30px 20px;
+}
+section {
+    margin-bottom: 40px;
+}
+.today h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.focus {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.focus img {
+    max-width: 200px;
+    border-radius: 10px;
+}
+.experience {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+footer {
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+footer .links a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
