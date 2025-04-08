@@ -6,6 +6,7 @@
 .game-frame {
   display: flex;
   justify-content: center;
+  text-align: center;
   padding: 2rem;
 }
 
@@ -218,7 +219,7 @@ footer .links a {
     white-space: nowrap; /* Empêche les images de passer à la ligne */
     margin-bottom: 10px;
     padding-bottom: 5px;
-    padding-top: 20px; /* Pour laisser de l'espace pour la barre de défilement si nécessaire */
+    padding-top: 50px; /* Pour laisser de l'espace pour la barre de défilement si nécessaire */
 }
 
 .image-list {
@@ -236,7 +237,29 @@ footer .links a {
 .bottom-text-area {
     margin-top: 15px;
     padding: 10px;
-    border: 1px solid #eee;
-    background-color: #f9f9f9;
-    border-radius: 3px;
+    text-align: center;
+}
+.bottom-text-area-title {
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 700;
+    font-size:1.5rem;
+}
+#startGameBtn,
+#fullscreenBtn {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #5d57ff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#startGameBtn:hover,
+#fullscreenBtn:hover {
+  background-color: #3e3ae6;
 }

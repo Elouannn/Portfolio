@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8" />
@@ -9,7 +9,7 @@
 <body>
     <header>
         <h1>Elouann Giacomoni</h1>
-        <p>UX Designer � Game Designer � Developer</p>
+        <p>UX Designer · Game Designer · Developer</p>
         <nav>
             <a href="index">Accueil</a>
             <a href="projects">Projects</a>
@@ -32,29 +32,53 @@
         <div class="text-block">
             <p><strong>Titre :</strong> Foam's Up!'</p>
             <p><strong>Plateforme :</strong> PC ( Versus ou Solo ) et Mobile (Solo only )</p>
+            <p><strong>Public :</strong> Tout public, casual friendly</p>
+            <p><strong>Temps de jeu :</strong> <5 minutes / partie </p>
+            <p><strong>Origine :</strong> Global Game Jam - Dijon - 48h</p>
+            <p><strong>Controls :</strong>Player 1:  WASD / ZQSD, Souris, Doigt (Ecran tactile) ou Gamepad 1 <br>
+Player 2:  Arrows , ou Gamepad 2 (ou controllé par un Bot)</p>
+            
         </div>
         </div>
         <div class="image-scroll-container">
             <div class="image-list">
-                <img src="assets/Image_FoamsUp.png" alt="Image 1">
-                <img src="assets/Image_FoamsUp.png" alt="Image 2">
-                <img src="assets/Image_FoamsUp.png" alt="Image 3">
-                <img src="assets/Image_FoamsUp.png" alt="Image 4">
-                <img src="assets/Image_FoamsUp.png" alt="Image 5">
-                <img src="assets/Image_FoamsUp.png" alt="Image 6">
-                <img src="assets/Image_FoamsUp.png" alt="Image 7">
-                <img src="assets/Image_FoamsUp.png" alt="Image 8">
-                <img src="assets/Image_FoamsUp.png" alt="Image 9">
+                <img src="assets/Image_FoamsUp2.png" alt="Image 1">
+                <img src="assets/Image_FoamsUp3.png" alt="Image 2">
+                <img src="assets/Image_FoamsUp5.png" alt="Image 3">
+                <img src="assets/Image_FoamsUp4.png" alt="Image 4">
                 </div>
         </div>
-        <div class="bottom-text-area">
-            <p>Ceci est la zone de texte situ�e en dessous de la liste d'images d�filante.</p>
-            <p>Vous pouvez y placer des informations suppl�mentaires ou des instructions.</p>
+        <div class="bottom-text-area-title">
+            <p>Important<br></p>
+            </div>
+            <div class= "bottom-text-area">
+            <p>Si vous voulez vous entrainer en solo, sélectionnez un Bot dans le menu de sélection des personnages avant la partie ! Parviendrez-vous à battre les 3 niveaux de difficulté ?!<br><br>
+            </div>
+        <div class="bottom-text-area-title">
+            <p>The game<br></p>
+        </div>
+        <div class ="bottom-text-area">
+        <p>Ce jeu a été réalisé à l'occasion de la Global Game Jam 2025 sur le thème "Bubble".<br>
+
+        Affrontez votre pilier de comptoire préféré pour devenir le Roi de la Taverne ! Choisissez votre avatar, votre récipient, et en avant ! <br>L'objectif est simple : <strong> renverser le verre de l'autre avant le votre !</strong>🍻</p>
         </div>
     </section>
     <section class="game-frame">
-        <iframe src="games/foams-up/index.html" width="800" height="600" frameborder="0" allowfullscreen></iframe>
-    </section>
+    <button id="startGameBtn">▶ Start Game</button>
+    <div id="gameContainer" style="display: none;">
+        <iframe id="gameIframe" src="games/foams-up/index.html" width="800" height="600" frameborder="0" allowfullscreen></iframe>
+        <br>
+        <button id="fullscreenBtn">⛶ Fullscreen</button>
+    </div>
+</section>
+<p><strong>Crédits :</strong> Inès Chmourrane : 2D Artist
+Lise Carton : 2D Artist
+Salomé Raffort : 2D Artist
+Roxane Jacquot : Game Designer & 2D Artist
+Elouann Giacomoni : Development - Godot
+Rémi Monthiller : Development - Godot
+Robin Brech : Sound Designer / Compositor
+Sylvain Debrock : Sound Designer / Compositor</p>
 </main>
 
 <script>
@@ -70,8 +94,28 @@
             selectedImg.style.display = 'none';
         }
     });
-</script>
+    </script>
+    <script>
+        const startBtn = document.getElementById("startGameBtn");
+        const gameContainer = document.getElementById("gameContainer");
+        const iframe = document.getElementById("gameIframe");
+        const fullscreenBtn = document.getElementById("fullscreenBtn");
 
+        startBtn.addEventListener("click", () => {
+        startBtn.style.display = "none";
+        gameContainer.style.display = "block";
+        });
+
+        fullscreenBtn.addEventListener("click", () => {
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.webkitRequestFullscreen) {
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) {
+            iframe.msRequestFullscreen();
+        }
+        });
+    </script>
     <!-- Footer -->
     <footer>
         <p>Email : <a href="mailto:elouann.giacco.pro@gmail.com">elouann.giacco.pro@gmail.com</a></p>
@@ -81,5 +125,6 @@
             <a href="#">Home Page</a>
         </div>
     </footer>
+
 </body>
 </html>
