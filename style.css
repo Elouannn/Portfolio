@@ -151,6 +151,10 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
+experience:hover{
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    transform: translateY(-4px);
+} 
 
 .experience div {
     background-color: #fdfdfd;
@@ -195,4 +199,44 @@ footer .links a {
     .focus img {
         width: 100%;
     }
+}
+.new-block {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.text-block {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.image-scroll-container {
+    width: 100%; /* Important : Définir une largeur pour le conteneur */
+    overflow-x: auto; /* Active le défilement horizontal */
+    white-space: nowrap; /* Empêche les images de passer à la ligne */
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    padding-top: 20px; /* Pour laisser de l'espace pour la barre de défilement si nécessaire */
+}
+
+.image-list {
+    display: inline-block; /* Permet aux images de s'aligner horizontalement */
+}
+
+.image-list img {
+    height: 200px; /* Définissez la hauteur souhaitée */
+    margin-right: 10px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    display: inline-block; /* Assurez-vous que les images sont en ligne */
+}
+
+.bottom-text-area {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+    border-radius: 3px;
 }

@@ -17,21 +17,60 @@
         </nav>
     </header>
     <section class="today">
-            <center><h2>Phoam's Up!'</h2>
+            <center><h2>Foam's Up!'</h2>
         </section>
 
     <main>
-        <section class="focus">
-            <img src="assets/Image_FoamsUp.png" >
-            <div>
-                <p>Versus and solo chill game, make it foam !</p>
-                <p><br><strong>Playable online !</strong></p>
-            </div>
-        </section>    
-        <section class="game-frame">
-            <iframe src="games/foams-up/index.html" width="800" height="600" frameborder="0" allowfullscreen></iframe>
-        </section>
-    </main>
+    <section class="new-block">
+    <div style="display: grid; grid-template-columns: auto 1fr; gap: 15px;">
+          <div>
+    <img src="assets/Image_FoamsUp.png"
+         
+    weidth = 300
+    height = 200>
+    </div>
+        <div class="text-block">
+            <p><strong>Titre :</strong> Foam's Up!'</p>
+            <p><strong>Plateforme :</strong> PC ( Versus ou Solo ) et Mobile (Solo only )</p>
+        </div>
+        </div>
+        <div class="image-scroll-container">
+            <div class="image-list">
+                <img src="assets/Image_FoamsUp.png" alt="Image 1">
+                <img src="assets/Image_FoamsUp.png" alt="Image 2">
+                <img src="assets/Image_FoamsUp.png" alt="Image 3">
+                <img src="assets/Image_FoamsUp.png" alt="Image 4">
+                <img src="assets/Image_FoamsUp.png" alt="Image 5">
+                <img src="assets/Image_FoamsUp.png" alt="Image 6">
+                <img src="assets/Image_FoamsUp.png" alt="Image 7">
+                <img src="assets/Image_FoamsUp.png" alt="Image 8">
+                <img src="assets/Image_FoamsUp.png" alt="Image 9">
+                </div>
+        </div>
+        <div class="bottom-text-area">
+            <p>Ceci est la zone de texte située en dessous de la liste d'images défilante.</p>
+            <p>Vous pouvez y placer des informations supplémentaires ou des instructions.</p>
+        </div>
+    </section>
+    <section class="game-frame">
+        <iframe src="games/foams-up/index.html" width="800" height="600" frameborder="0" allowfullscreen></iframe>
+    </section>
+</main>
+
+<script>
+    const imageSelect = document.getElementById('image-select');
+    const selectedImg = document.getElementById('selected-img');
+
+    imageSelect.addEventListener('change', function() {
+        const selectedValue = this.value;
+        if (selectedValue) {
+            selectedImg.src = `assets/images/${selectedValue}`; // Assurez-vous que le chemin est correct
+            selectedImg.style.display = 'block';
+        } else {
+            selectedImg.style.display = 'none';
+        }
+    });
+</script>
 
     <!-- Footer -->
     <footer>
