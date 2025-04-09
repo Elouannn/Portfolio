@@ -40,6 +40,68 @@ body {
   transform: translateY(-4px);
 }
 
+.main-header {
+  background-color: #5a5a5a; /* gris foncé */
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+
+
+.title-section h1 {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.title-section p {
+  margin: 0;
+  padding:0;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.title-section h1,
+.title-section p {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  width: 100%; /*  prend toute la largeur */
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 50%; /* les boutons prennent 50% de la largeur totale */
+}
+
+.navbar li {
+  flex: 1; /* chaque bouton prend 1/3 de l'espace */
+}
+
+.navbar a {
+  text-decoration: none;
+  background-color: #5a5a5a; /* gris foncé */
+  color: white;
+  font-variant: small-caps;
+  font-size: 14px;
+  padding: 15px 0;
+  display: block;
+}
+
+.navbar a:hover {
+  background-color: #777777; /* légèrement plus clair au survol */
+}
+.navbar .selected a{
+  background-color: #f0f0f0;
+  color : black;
+}
+
 header {
     background-color: #444;
     color: white;
@@ -152,7 +214,7 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
-experience:hover{
+.experience:hover{
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
     transform: translateY(-4px);
 } 
@@ -178,17 +240,38 @@ footer {
     padding: 30px 20px;
     text-align: center;
     margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    width: 100%; /* prend toute la largeur */
 }
 
 footer .links {
-    margin-top: 10px;
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    width: 80%; /* Augmenter la largeur pour éviter le chevauchement sur petits écrans */
+    justify-content: space-around; /* Distribuer l'espace entre les éléments */
+    align-items: center; /* Aligner verticalement les éléments sur la ligne médiane */
 }
 
 footer .links a {
-    margin: 0 10px;
     color: white;
     text-decoration: none;
     font-weight: 500;
+    display: flex; /* Pour aligner l'image et le texte à l'intérieur du lien */
+    align-items: center; /* Aligner verticalement l'image et le texte */
+    gap: 10px; /* Ajouter un espace entre l'image et le texte */
+}
+
+footer .email-container {
+    display: flex;
+    align-items: center; /* Aligner verticalement l'image et le paragraphe */
+    gap: 10px; /* Ajouter un espace entre l'image et le texte */
+}
+
+footer .email-container p {
+    margin: 0; /* Supprimer la marge par défaut du paragraphe */
 }
 
 @media (max-width: 768px) {
@@ -214,24 +297,24 @@ footer .links a {
 }
 
 .image-scroll-container {
-    width: 100%; /* Important : Définir une largeur pour le conteneur */
-    overflow-x: auto; /* Active le défilement horizontal */
-    white-space: nowrap; /* Empêche les images de passer à la ligne */
+    width: 100%; 
+    overflow-x: auto;
+    white-space: nowrap; 
     margin-bottom: 10px;
     padding-bottom: 5px;
-    padding-top: 50px; /* Pour laisser de l'espace pour la barre de défilement si nécessaire */
+    padding-top: 50px; 
 }
 
 .image-list {
-    display: inline-block; /* Permet aux images de s'aligner horizontalement */
+    display: inline-block;
 }
 
 .image-list img {
-    height: 200px; /* Définissez la hauteur souhaitée */
+    height: 200px; 
     margin-right: 10px;
     border: 1px solid #eee;
     border-radius: 3px;
-    display: inline-block; /* Assurez-vous que les images sont en ligne */
+    display: inline-block; 
 }
 
 .bottom-text-area {

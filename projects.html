@@ -7,22 +7,26 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Elouann Giacomoni</h1>
-        <p>UX Designer · Game Designer · Developer</p>
-        <nav>
-            <a href="index">Accueil</a>
-            <a href="projects">Projects</a>
-            <a href="about">About me</a>
-        </nav>
-    </header>
-
+    <header class="main-header">
+  <div class="title-section">
+    <h1>Elouann Giacomoni</h1>
+    <p>UX/UI Designer - Game Designer - Developper</p>
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="">Accueil</a></li>
+      <li class = "selected"><a href="projects">Projects</a></li>
+      <li><a href="about">About me</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
     <section class="today">
             <center><h2>Best games so far</h2>
             
         </section>
     <!-- Projet 1 : Pharaoh's Frog' -->
-    <main>
+    
     <a href="PharaohsFrog" class="project-link">
         <section class="focus project-card">
             <img src="assets/Image_PharaohsFrog.png" >
@@ -97,12 +101,15 @@
 
     <!-- Footer -->
     <footer>
-        <p>Email : <a href="mailto:elouann.giacco.pro@gmail.com">elouann.giacco.pro@gmail.com</a></p>
-        <div class="links">
-            <a href="https://mordekayy.itch.io/">Itch.io</a>
-            <a href="https://www.linkedin.com/in/elouann-giacomoni-702161255/">LinkedIn</a>
-            <a href="#">Home Page</a>
+    <div class="links">
+        <div class="email-container">
+            <img src="assets/Image_Email.png" width="40" height="40" alt="Email">
+            <p>Email : <a href="mailto:elouann.giacco.pro@gmail.com">elouann.giacco.pro@gmail.com</a></p>
         </div>
-    </footer>
+        <a href="https://mordekayy.itch.io/"><img src="assets/Image_Itch.png" width="40" height="40" alt="Itch.io">Itch.io</a>
+        <a href="https://www.linkedin.com/in/elouann-giacomoni-702161255/"><img src="assets/Image_Linkedin.png" width="40" height="40" alt="LinkedIn">LinkedIn</a>
+        <a href="#"><img src="assets/Image_Home.png" width="40" height="40" alt="Home Page">Home Page</a>
+    </div>
+</footer>
 </body>
 </html>

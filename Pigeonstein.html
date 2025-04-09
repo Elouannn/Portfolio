@@ -7,15 +7,19 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Elouann Giacomoni</h1>
-        <p>UX Designer · Game Designer · Developer</p>
-        <nav>
-            <a href="index">Accueil</a>
-            <a href="projects">Projects</a>
-            <a href="about">About me</a>
-        </nav>
-    </header>
+    <header class="main-header">
+  <div class="title-section">
+    <h1>Elouann Giacomoni</h1>
+    <p>UX/UI Designer - Game Designer - Developper</p>
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="">Accueil</a></li>
+      <li class = "selected"><a href="projects">Projects</a></li>
+      <li><a href="about">About me</a></li>
+    </ul>
+  </nav>
+</header>
     <section class="today">
             <center><h2>Foam's Up!'</h2>
         </section>
@@ -24,14 +28,22 @@
     <section class="new-block">
     <div style="display: grid; grid-template-columns: auto 1fr; gap: 15px;">
           <div>
-    <img src="assets/Image_Pigeonstein.png"
+    <img src="assets/Image_FoamsUp.png"
          
-    weidth = 300
-    height = 200>
+    weidth = 400
+    height = 270>
     </div>
         <div class="text-block">
-            <p><strong>Titre :</strong> Foam's Up!'</p>
-            <p><strong>Plateforme :</strong> PC ( Versus ou Solo ) et Mobile (Solo only )</p>
+            <p><strong>Title :</strong> Foam's Up!'</p>
+            <p><strong>Plateforme :</strong> PC ( Versus or Solo ) and Mobile (Solo only )</p>
+            <p><strong>Public :</strong> All ages, casual friendly</p>
+            <p><strong>Made with :</strong> Godot</p>
+            <p><strong>Play time :</strong> <5 minutes / partie </p>
+            <p><strong>Origin :</strong> Global Game Jam - Dijon - 48h</p>
+            <p><strong>Controls :</strong>Player 1:  WASD / ZQSD, Mouse, finger (Digital Devices) or Gamepad 1 <br>
+            Player 2:  Arrows , or Gamepad 2 (or controlled by Bot)</p>
+            <p><br><strong>Play it in the browser (down bellow)</strong></p>
+            
         </div>
         </div>
         <div class="image-scroll-container">
@@ -47,19 +59,37 @@
                 <img src="assets/Image_Pigeonstein.png" alt="Image 9">
                 </div>
         </div>
-        <div class="bottom-text-area">
-            <p>Ceci est la zone de texte située en dessous de la liste d'images défilante.</p>
-            <p>Vous pouvez y placer des informations supplémentaires ou des instructions.</p>
+        <div class="bottom-text-area-title">
+            <p>Important<br></p>
+            </div>
+            <div class= "bottom-text-area">
+            <p>If you do not have a friend to play with, you can select a bot in the character selection menu. Try to defeat all 3 levels of bots !<br><br>
+            </div>
+        <div class="bottom-text-area-title">
+            <p>The game<br></p>
+        </div>
+        <div class ="bottom-text-area">
+        <p>Here is our game made during the Global Game Jam 2025, on the theme : Bubbles.<br>
+
+        Take on your drinking partner or the King of the Tavern, choose your favorite beer, and foam your way to victory !🍻<br><br>
         </div>
     </section>
     <section class="game-frame">
     <button id="startGameBtn">▶ Start Game</button>
-    <div  id="gameContainer" style="display: none;">
-        <iframe id="gameIframe" src="games/foams-up/index.html" width="800" height="600" frameborder="0" allowfullscreen></iframe>
+    <div id="gameContainer" style="display: none;">
+        <iframe id="gameIframe" src="games/pigeonstein/index.html" width="800" height="600" frameborder="0" allowfullscreen></iframe>
         <br>
         <button id="fullscreenBtn">⛶ Fullscreen</button>
     </div>
 </section>
+<p><strong>Crédits :</strong> Inès Chmourrane : 2D Artist
+Lise Carton : 2D Artist
+Salomé Raffort : 2D Artist
+Roxane Jacquot : Game Designer & 2D Artist
+Elouann Giacomoni : Development - Godot
+Rémi Monthiller : Development - Godot
+Robin Brech : Sound Designer / Compositor
+Sylvain Debrock : Sound Designer / Compositor</p>
 </main>
 
 <script>
@@ -99,13 +129,16 @@
     </script>
     <!-- Footer -->
     <footer>
-        <p>Email : <a href="mailto:elouann.giacco.pro@gmail.com">elouann.giacco.pro@gmail.com</a></p>
-        <div class="links">
-            <a href="https://mordekayy.itch.io/">Itch.io</a>
-            <a href="https://www.linkedin.com/in/elouann-giacomoni-702161255/">LinkedIn</a>
-            <a href="#">Home Page</a>
+    <div class="links">
+        <div class="email-container">
+            <img src="assets/Image_Email.png" width="40" height="40" alt="Email">
+            <p>Email : <a href="mailto:elouann.giacco.pro@gmail.com">elouann.giacco.pro@gmail.com</a></p>
         </div>
-    </footer>
+        <a href="https://mordekayy.itch.io/"><img src="assets/Image_Itch.png" width="40" height="40" alt="Itch.io">Itch.io</a>
+        <a href="https://www.linkedin.com/in/elouann-giacomoni-702161255/"><img src="assets/Image_Linkedin.png" width="40" height="40" alt="LinkedIn">LinkedIn</a>
+        <a href="#"><img src="assets/Image_Home.png" width="40" height="40" alt="Home Page">Home Page</a>
+    </div>
+</footer>
 
 </body>
 </html>
