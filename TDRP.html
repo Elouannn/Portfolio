@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
+<IfModule mod_headers.c>
+  Header set Cross-Origin-Opener-Policy "same-origin"
+  Header set Cross-Origin-Embedder-Policy "require-corp"
+</IfModule>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,40 +11,86 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Elouann Giacomoni</h1>
-        <p>UX Designer · Game Designer · Developer</p>
-        <nav>
-            <a href="index">Accueil</a>
-            <a href="projects">Projects</a>
-            <a href="about">About me</a>
-        </nav>
-    </header>
+    <header class="main-header">
+  <div class="title-section">
+    <h1>Elouann Giacomoni</h1>
+    <p>UX/UI Designer - Game Designer - Developper</p>
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="">Home</a></li>
+      <li class = "selected"><a href="projects">Projects</a></li>
+      <li><a href="about">About me</a></li>
+    </ul>
+  </nav>
+</header>
     <section class="today">
-            <center><h2>Pigeonstein'</h2>
+            <center><h2>The Deep Root Path</h2>
         </section>
 
     <main>
-        <section class="focus">
-            <img src="assets/Image_Pigeonstein.png" >
-            <div>
-                <p>Versus and solo chill game, make it foam !</p>
-                <p><br><strong>Playable online !</strong></p>
+    <section class="new-block">
+    <div style="display: grid; grid-template-columns: auto 1fr; gap: 15px;">
+          <div>
+    <img src="assets/Image_TDRP.png"
+         
+    weidth = 400
+    height = 270>
+    </div>
+        <div class="text-block">
+            <p><strong>Title :</strong> The Deep Root Path</p>
+            <p><strong>Type :</strong> 2D Puzzle Arcade</p>
+            <p><strong>Plateforme :</strong> PC Solo</p>
+            <p><strong>Public :</strong> 12+ (violence), casual friendly</p>
+            <p><strong>Made with :</strong> Unity</p>
+            <p><strong>Play time :</strong> <few minutes/game, die and retry </p>
+            <p><strong>Origin :</strong> Global Game Jam 2023 - Dijon - 48h</p>
+            <p><strong>Controls :</strong> ZQSD and Space</p>
+            <p><br><strong> Playable at :</strong><a href="https://alamboley.github.io/GGJ-2023/"> Game Link</a></p>
+            
+        </div>
+        </div>
+        <div class="image-scroll-container">
+            <div class="image-list">
+                <img src="assets/Image_TDRP1.png" alt="Image 1">
+                <img src="assets/Image_TDRP2.png" alt="Image 2">
+                <img src="assets/Image_TDRP3.png" alt="Image 3">
+                <img src="assets/Image_TDRP4.png" alt="Image 4">
+                </div>
+        </div>
+        <div class="bottom-text-area-title">
+            <p>Important<br></p>
             </div>
-        </section>    
-        <section class="game-frame">
-            <iframe src="games/pigeonstein/index.html" width="800" height="600" frameborder="0" allowfullscreen></iframe>
-        </section>
-    </main>
+            <div class= "bottom-text-area">
+            <p>This game is GRAPHIC about DEATH involving cartoony characters.<br><br>
+            </div>
+        <div class="bottom-text-area-title">
+            <p>The game<br></p>
+        </div>
+        <div class ="bottom-text-area">
+        <p>Dig through dirt and stone to prepare the Root path !<br><br>
+        </div>
+    </section>
+    
+<p><strong>Credits :</strong> Dev : Aymeric --
+
+Artist : Clement --
+
+Game design and Level design : Elouann and Leo</p>
+</main>
 
     <!-- Footer -->
     <footer>
-        <p>Email : <a href="mailto:elouann.giacco.pro@gmail.com">elouann.giacco.pro@gmail.com</a></p>
-        <div class="links">
-            <a href="https://mordekayy.itch.io/">Itch.io</a>
-            <a href="https://www.linkedin.com/in/elouann-giacomoni-702161255/">LinkedIn</a>
-            <a href="#">Home Page</a>
+    <div class="links">
+        <div class="email-container">
+            <img src="assets/Image_Email.png" width="40" height="40" alt="Email">
+            <p>Email : <a href="mailto:elouann.giacco.pro@gmail.com">elouann.giacco.pro@gmail.com</a></p>
         </div>
-    </footer>
+        <a href="https://mordekayy.itch.io/"><img src="assets/Image_Itch.png" width="40" height="40" alt="Itch.io">Itch.io</a>
+        <a href="https://www.linkedin.com/in/elouann-giacomoni-702161255/"><img src="assets/Image_Linkedin.png" width="40" height="40" alt="LinkedIn">LinkedIn</a>
+        <a href="#"><img src="assets/Image_Home.png" width="40" height="40" alt="Home Page">Home Page</a>
+    </div>
+</footer>
+
 </body>
 </html>

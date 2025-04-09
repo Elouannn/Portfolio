@@ -1,5 +1,9 @@
 ﻿<!DOCTYPE html>
 <html lang="fr">
+<IfModule mod_headers.c>
+  Header set Cross-Origin-Opener-Policy "same-origin"
+  Header set Cross-Origin-Embedder-Policy "require-corp"
+</IfModule>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,64 +18,64 @@
   </div>
   <nav class="navbar">
     <ul>
-      <li><a href="">Accueil</a></li>
+      <li><a href="">Home</a></li>
       <li class = "selected"><a href="projects">Projects</a></li>
       <li><a href="about">About me</a></li>
     </ul>
   </nav>
 </header>
     <section class="today">
-            <center><h2>Foam's Up!'</h2>
+            <center><h2>Pigeonstein</h2>
         </section>
 
     <main>
     <section class="new-block">
     <div style="display: grid; grid-template-columns: auto 1fr; gap: 15px;">
           <div>
-    <img src="assets/Image_FoamsUp.png"
+    <img src="assets/Image_Pigeonstein.png"
          
     weidth = 400
     height = 270>
     </div>
         <div class="text-block">
-            <p><strong>Title :</strong> Foam's Up!'</p>
-            <p><strong>Plateforme :</strong> PC ( Versus or Solo ) and Mobile (Solo only )</p>
-            <p><strong>Public :</strong> All ages, casual friendly</p>
+            <p><strong>Title :</strong> Pigeonstein</p>
+            <p><strong>Type :</strong> Party game</p>
+            <p><strong>Plateforme :</strong> PC Coop</p>
+            <p><strong>Public :</strong> 16+ (violence), casual friendly</p>
             <p><strong>Made with :</strong> Godot</p>
-            <p><strong>Play time :</strong> <5 minutes / partie </p>
-            <p><strong>Origin :</strong> Global Game Jam - Dijon - 48h</p>
-            <p><strong>Controls :</strong>Player 1:  WASD / ZQSD, Mouse, finger (Digital Devices) or Gamepad 1 <br>
-            Player 2:  Arrows , or Gamepad 2 (or controlled by Bot)</p>
-            <p><br><strong>Play it in the browser (down bellow)</strong></p>
+            <p><strong>Play time :</strong> <5 minutes / game </p>
+            <p><strong>Origin :</strong> Global Game Jam 2024 - Dijon - 48h</p>
+            <p><strong>Controls :</strong> Left Wing: ZQSD/WQSD to move and SPACE/A/E to hit<br>
+Right Wing: ARROWS/IJKL to move and ENTER/U/O to hit</p>
+            <p><br><strong> Play it in the browser (down bellow)</strong></p>
             
         </div>
         </div>
         <div class="image-scroll-container">
             <div class="image-list">
-                <img src="assets/Image_Pigeonstein.png" alt="Image 1">
-                <img src="assets/Image_Pigeonstein.png" alt="Image 2">
-                <img src="assets/Image_Pigeonstein.png" alt="Image 3">
-                <img src="assets/Image_Pigeonstein.png" alt="Image 4">
-                <img src="assets/Image_Pigeonstein.png" alt="Image 5">
-                <img src="assets/Image_Pigeonstein.png" alt="Image 6">
-                <img src="assets/Image_Pigeonstein.png" alt="Image 7">
-                <img src="assets/Image_Pigeonstein.png" alt="Image 8">
-                <img src="assets/Image_Pigeonstein.png" alt="Image 9">
+                <img src="assets/Image_Pigeonstein1.png" alt="Image 1">
+                <img src="assets/Image_Pigeonstein2.png" alt="Image 2">
+                <img src="assets/Image_Pigeonstein3.png" alt="Image 3">
+                <img src="assets/Image_Pigeonstein4.png" alt="Image 4">
                 </div>
         </div>
         <div class="bottom-text-area-title">
             <p>Important<br></p>
             </div>
             <div class= "bottom-text-area">
-            <p>If you do not have a friend to play with, you can select a bot in the character selection menu. Try to defeat all 3 levels of bots !<br><br>
+            <p>This game is GRAPHIC about DEATH, BLOOD and VIOLENCE involving cartoony characters.<br><br>
             </div>
         <div class="bottom-text-area-title">
             <p>The game<br></p>
         </div>
         <div class ="bottom-text-area">
-        <p>Here is our game made during the Global Game Jam 2025, on the theme : Bubbles.<br>
+        <p>Pigeonstein is a 2 players co-op/versus  game about a pigeon and a dove, both in love with each other. But when they were crossing the road to finally meet properly, they were both hit by a car and cut in half. But their love was stronger than this and they fused to create the ultimate bird:<br> THE PIGEONSTEIN!<br>
 
-        Take on your drinking partner or the King of the Tavern, choose your favorite beer, and foam your way to victory !🍻<br><br>
+With their newly acquired power, they decide to take revenge on the monsters that dare to step on them!
+
+ The pigeon use its sharp bone to pierce through monsters feet, and the dove use its soft feather to tickle them.<br>
+
+Each player control one side of the same body, forcing players to team up in order to survive.  Be the best side and score the most point!<br><br>
         </div>
     </section>
     <section class="game-frame">
@@ -82,14 +86,10 @@
         <button id="fullscreenBtn">⛶ Fullscreen</button>
     </div>
 </section>
-<p><strong>Crédits :</strong> Inès Chmourrane : 2D Artist
-Lise Carton : 2D Artist
-Salomé Raffort : 2D Artist
-Roxane Jacquot : Game Designer & 2D Artist
-Elouann Giacomoni : Development - Godot
-Rémi Monthiller : Development - Godot
-Robin Brech : Sound Designer / Compositor
-Sylvain Debrock : Sound Designer / Compositor</p>
+<p><strong>Credits :</strong> Game design : Elouann Giacomoni, Botella Mathieu, Benoît Podevin --
+Dev : Rémi Monthiller --
+Sound design : Robin Brech --
+2D  Art: Lise Carton</p>
 </main>
 
 <script>
