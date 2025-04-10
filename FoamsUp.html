@@ -73,11 +73,34 @@
     <section class="game-frame">
     <button id="startGameBtn">▶ Start Game</button>
     <div id="gameContainer" style="display: none;">
-        <iframe id="gameIframe" src="games/foams-up/index.html" width="800" height="600" frameborder="0" allowfullscreen></iframe>
+        <iframe id="gameIframe" width="800" height="600" frameborder="0" allowfullscreen></iframe>
         <br>
         <button id="fullscreenBtn">⛶ Fullscreen</button>
     </div>
 </section>
+
+<script>
+    const startBtn = document.getElementById("startGameBtn");
+    const gameContainer = document.getElementById("gameContainer");
+    const iframe = document.getElementById("gameIframe");
+    const fullscreenBtn = document.getElementById("fullscreenBtn");
+
+    startBtn.addEventListener("click", () => {
+        startBtn.style.display = "none";
+        gameContainer.style.display = "block";
+        iframe.src = "games/foams-up/index.html"; // Le jeu se lance ici
+    });
+
+    fullscreenBtn.addEventListener("click", () => {
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.webkitRequestFullscreen) {
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) {
+            iframe.msRequestFullscreen();
+        }
+    });
+</script>
 <p><strong>Credits :</strong> Inès Chmourrane : 2D Artist
 Lise Carton : 2D Artist
 Salomé Raffort : 2D Artist
@@ -88,41 +111,7 @@ Robin Brech : Sound Designer / Compositor
 Sylvain Debrock : Sound Designer / Compositor</p>
 </main>
 
-<script>
-    const imageSelect = document.getElementById('image-select');
-    const selectedImg = document.getElementById('selected-img');
 
-    imageSelect.addEventListener('change', function() {
-        const selectedValue = this.value;
-        if (selectedValue) {
-            selectedImg.src = `assets/images/${selectedValue}`; // Assurez-vous que le chemin est correct
-            selectedImg.style.display = 'block';
-        } else {
-            selectedImg.style.display = 'none';
-        }
-    });
-    </script>
-    <script>
-        const startBtn = document.getElementById("startGameBtn");
-        const gameContainer = document.getElementById("gameContainer");
-        const iframe = document.getElementById("gameIframe");
-        const fullscreenBtn = document.getElementById("fullscreenBtn");
-
-        startBtn.addEventListener("click", () => {
-        startBtn.style.display = "none";
-        gameContainer.style.display = "block";
-        });
-
-        fullscreenBtn.addEventListener("click", () => {
-        if (iframe.requestFullscreen) {
-            iframe.requestFullscreen();
-        } else if (iframe.webkitRequestFullscreen) {
-            iframe.webkitRequestFullscreen();
-        } else if (iframe.msRequestFullscreen) {
-            iframe.msRequestFullscreen();
-        }
-        });
-    </script>
     <!-- Footer -->
     <footer>
     <div class="links">
