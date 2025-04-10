@@ -47,7 +47,7 @@
             <p><strong>Origin :</strong> Global Game Jam 2024 - Dijon - 48h</p>
             <p><strong>Controls :</strong> Left Wing: ZQSD/WQSD to move and SPACE/A/E to hit<br>
 Right Wing: ARROWS/IJKL to move and ENTER/U/O to hit</p>
-            <p><br><strong> Play it in the browser (down bellow)</strong></p>
+            <p><br><strong> Play it in browser at this link : </strong> <a href="https://dj-requin.itch.io/pilombe">Itch.io</a></p>
             
         </div>
         </div>
@@ -78,55 +78,14 @@ With their newly acquired power, they decide to take revenge on the monsters tha
 Each player control one side of the same body, forcing players to team up in order to survive.  Be the best side and score the most point!<br><br>
         </div>
     </section>
-    <section class="game-frame">
-    <button id="startGameBtn">▶ Start Game</button>
-    <div id="gameContainer" style="display: none;">
-        <iframe id="gameIframe" src="games/pigeonstein/index.html" width="800" height="600" frameborder="0" allowfullscreen></iframe>
-        <br>
-        <button id="fullscreenBtn">⛶ Fullscreen</button>
-    </div>
-</section>
+    
 <p><strong>Credits :</strong> Game design : Elouann Giacomoni, Botella Mathieu, Benoît Podevin --
 Dev : Rémi Monthiller --
 Sound design : Robin Brech --
 2D  Art: Lise Carton</p>
 </main>
 
-<script>
-    const imageSelect = document.getElementById('image-select');
-    const selectedImg = document.getElementById('selected-img');
 
-    imageSelect.addEventListener('change', function() {
-        const selectedValue = this.value;
-        if (selectedValue) {
-            selectedImg.src = `assets/images/${selectedValue}`; // Assurez-vous que le chemin est correct
-            selectedImg.style.display = 'block';
-        } else {
-            selectedImg.style.display = 'none';
-        }
-    });
-    </script>
-    <script>
-        const startBtn = document.getElementById("startGameBtn");
-        const gameContainer = document.getElementById("gameContainer");
-        const iframe = document.getElementById("gameIframe");
-        const fullscreenBtn = document.getElementById("fullscreenBtn");
-
-        startBtn.addEventListener("click", () => {
-        startBtn.style.display = "none";
-        gameContainer.style.display = "block";
-        });
-
-        fullscreenBtn.addEventListener("click", () => {
-        if (iframe.requestFullscreen) {
-            iframe.requestFullscreen();
-        } else if (iframe.webkitRequestFullscreen) {
-            iframe.webkitRequestFullscreen();
-        } else if (iframe.msRequestFullscreen) {
-            iframe.msRequestFullscreen();
-        }
-        });
-    </script>
     <!-- Footer -->
     <footer>
     <div class="links">
