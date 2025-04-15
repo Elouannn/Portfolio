@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<div class="side-images left">
+    <img src="assets/Image_Fond6.png" >
+    <img src="assets/Image_Fond3.png" >
+</div>
+
+<div class="side-images right">
+    <img src="assets/Image_Fond7.png"  >
+    <img src="assets/Image_Fond4.png"  >
+    <img src="assets/Image_Fond5.png"  >
+</div>
     <header>
         <h1>Elouann Giacomoni</h1>
     <p><h3>UX Designer - Game Designer - Developper</h3></p>
@@ -42,5 +52,27 @@
             <a href="#">Home Page</a>
         </div>
     </footer>
+    <script>
+    function updateSideImagesPosition() {
+        const header = document.querySelector("header");
+        const leftImages = document.querySelector(".side-images.left");
+        const rightImages = document.querySelector(".side-images.right");
+
+        const headerHeight = header.offsetHeight;
+
+        if (leftImages) {
+            leftImages.style.top = headerHeight*2 + "px";
+        }
+        if (rightImages) {
+            rightImages.style.top = headerHeight+10 + "px";
+        }
+    }
+
+    // Appel initial
+    window.addEventListener("DOMContentLoaded", updateSideImagesPosition);
+
+    // Appel sur redimensionnement
+    window.addEventListener("resize", updateSideImagesPosition);
+</script>
 </body>
 </html>
